@@ -5,43 +5,43 @@
   font-family: Lato, sans-serif;
 }
 
-.block-matrix {
+.head {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.block-matrix .matrix-img {
+.head .head__img {
   width: 100%;
 }
 
-.more-info {
+.head__info {
   font-family: fantasy, cursive;
 }
 
 @media (max-width: 768px) {
 
-  .block-matrix { 
+  .head { 
     text-align: center;
   }
 
 }
 
-.main-page {
+.main {
   display: block;
   width: 500px;
   margin: 0 auto 0;
   padding-top: 15px;
 }
 
-.label-task, .task {
+.task__name, .task__field {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
 
-.task-row {
+.task {
   display: flex;
 }
 
@@ -70,13 +70,12 @@ button {
   cursor: pointer;
 }
 
-.add:hover, .edit:hover {
+.task__button-add:hover, .task__button-edit:hover {
   color: #3a3a3a;
 }
 
 /* Heading */
-h3,
-.label {
+.section__title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -86,7 +85,7 @@ h3,
   text-transform: uppercase;
 }
 
-.task {
+.task__field {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -99,22 +98,22 @@ h3,
   color: #888;
 }
 
-.task:focus {
+.task__field:focus {
   color: #333;
 }
 
 /* New Task */
-.label {
+.section__title-add {
   display: block;
   margin: 0 0 20px;
 }
 
-#new-task {
+#task__field {
   width: 318px;
 }
 
 /* Task list */
-.li-item {
+.task__add {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -123,51 +122,51 @@ h3,
   align-items: center;
 }
 
-.li-item > * {
+.task__add > * {
   vertical-align: middle;
 }
 
-.li-item > .checkbox {
+.task__add > .task__checkbox {
   margin: 0 10px;
 }
 
-.li-item > .label-task {
+.task__add > .task__name {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.li-item > .task {
+.task__add > .task__field {
   width: 226px;
 }
 
-.delete .delete-img {
+.task__button-delete .task__button-img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.delete .delete-img:hover {
+.task__button-delete .task__button-img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-.completed-tasks .label-task {
+.section__completed .task__name {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.ul-item .li-item .task {
+.section__task .task__add .task__field {
   display: none;
 }
 
-.ul-item .edit-mode .task {
+.section__task .task__add-edit .task__field {
   display: inline-block;
   width: 224px;
 }
 
-.ul-item .edit-mode .label-task {
+.section__task .task__add-edit .task__name {
   display: none;
 }
